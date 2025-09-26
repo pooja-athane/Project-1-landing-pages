@@ -1,81 +1,105 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
+
+body {
     height: 100%;
     width: 100%;
 }
+
 /* mainn section */
-.cursor{
+.cursor {
     width: 20px;
     height: 20px;
     position: absolute;
     z-index: 999999;
     background-color: white;
     border-radius: 50%;
-    transition:all cubic-bezier(0.19,1,0,22,1)1s;
-    
+    transition: all cubic-bezier(0.19, 1, 0, 22, 1)1s;
+
 }
-.bounding{
+
+.bounding {
     width: fit-content;
     overflow: hidden;
 }
-.bounding-elem{
-    transform:translateY(100%)
+
+.bounding-elem {
+    transform: translateY(100%)
 }
 
-.main{
+.main {
     width: 100%;
     background-color: black;
+    font-family: General Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+
 }
-.hero{
+
+.hero {
     position: relative;
     height: 100vh;
     width: 100%;
     color: white;
     background-color: black;
 }
- .nav{
+
+.nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     text-align: center;
     padding: 20px 40px;
-    color: white;
+    /* color: white; */
 }
-.nav a{
+
+.nav a {
     text-decoration: none;
     color: white;
+    font-size: 1.2vw;
+    font-weight: 700;
 }
-.heading{
+
+.heading {
     margin-top: 90px;
+
+    margin-left: 3rem;
 }
-.heading h1{
-    margin-left: 30px;
-    font-size: 9vw;
+
+.heading h1 {
+    margin-left: 40px;
+    font-size: 10vw;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 1;
     opacity: .6;
 }
-.hedaing .second-h1{
-    margin-left: 250px;
+
+.hedaing .second-h1 {
+    margin-left: 180px;
 }
-.block-text{
-/* background-color: red; */
-display: flex;
-flex-direction: column;
-align-items: end;
-width: fit-content;
+
+.block-text {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
 }
-.block-text h3{
+
+.block-text .second-h1 {
+    margin-left: 15rem;
+}
+
+.block-text h3 {
+    padding-top: 1rem;
     font-size: 15px;
-    text-align: right;
+    /* text-align: right; */
 }
-.small-heading{
+
+.small-heading {
     color: white;
     display: flex;
     flex-direction: column;
@@ -84,14 +108,15 @@ width: fit-content;
     padding-right: 50px;
     /* background-color:red; */
 }
-.small-heading h5{
+
+.small-heading h5 {
     text-transform: uppercase;
     margin-top: .5vw;
     font-size: 1vw;
-    text-align:right;
+    text-align: right;
 }
 
-.hero-footer{
+.hero-footer {
     padding: 0 2vw;
     /* background-color: red; */
     width: 100%;
@@ -102,15 +127,19 @@ width: fit-content;
     align-items: center;
 
 }
-.hero-footer a{
+
+.hero-footer a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
 }
-.icon-set{
+
+.icon-set {
     display: flex;
     gap: 5px;
-}.hero-footer .circle{
+}
+
+.hero-footer .circle {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -119,15 +148,17 @@ width: fit-content;
     justify-content: center;
     align-items: center;
 }
-.second-section{
+
+.second-section {
     height: 152vh;
     width: 100%;
     padding-top: 200px;
     padding-right: 10vw;
     color: white;
-    background-color:black;
+    background-color: black;
 }
-.elem{
+
+.elem {
     width: 100%;
     padding: 3.5vw 3vw;
     padding-right: 0;
@@ -138,26 +169,30 @@ width: fit-content;
     justify-content: space-between;
     align-items: center;
 }
-.elem h1{
+
+.elem h1 {
     text-transform: uppercase;
     font-size: 7.6vw;
     opacity: .7;
 }
-.border-last{
+
+.border-last {
     border-bottom: 1px solid #888;
 }
-.elem img{
-    opacity:0;
+
+.elem img {
+    opacity: 0;
     height: 140%;
     z-index: 999;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50px;
     pointer-events: none;
 
 
 }
-.btn{
+
+.btn {
     margin: 70px 50px;
     padding: 0.5rem;
     border-radius: 2rem;
@@ -166,20 +201,24 @@ width: fit-content;
     border: 1px solid white;
     font-size: 15px;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: white;
     color: black;
-    
+
 }
-@keyframes slide{
-    from{
+
+@keyframes slide {
+    from {
         transform: translateX(0)
     }
-    to{
- transform: translateX(-100%)
+
+    to {
+        transform: translateX(-100%)
     }
 }
-.logos{
+
+.logos {
     height: 15vh;
     width: 100%;
     overflow: hidden;
@@ -190,42 +229,50 @@ width: fit-content;
     white-space: nowrap;
     /* margin-top: 300px; */
 }
-.logos:hover .logos-slide{
+
+.logos:hover .logos-slide {
     animation-play-state: paused;
 }
-.logos-slide{
+
+.logos-slide {
     display: inline-block;
-white-space: nowrap;
-animation: 19s slide infinite linear;
+    white-space: nowrap;
+    animation: 19s slide infinite linear;
 
 }
-.logos-slide img{
+
+.logos-slide img {
     margin: 0 40px;
 }
-.about{
+
+.about {
     width: 100%;
-    color:white;
+    color: white;
     display: flex;
     align-items: center;
     gap: 50px;
     padding: 100px 10vw;
-    padding-left:40vw ;  
+    padding-left: 40vw;
 
 }
-.text-about{
+
+.text-about {
     width: 25rem;
 }
-.text-about h5{
+
+.text-about h5 {
     text-transform: uppercase;
     opacity: 0.6;
     margin-bottom: 10px;
 }
-.text-about p{
-   line-height: 1.7;
-   margin-bottom: 30px;
-    
+
+.text-about p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+
 }
-.text-about a{
+
+.text-about a {
     padding: 12px 12px;
     border: 1px solid #888;
     border-radius: 100px;
@@ -233,9 +280,11 @@ animation: 19s slide infinite linear;
     color: white;
     font-size: 13px;
 }
-.about img{
+
+.about img {
     width: 250px;
 }
+
 /* .subscribe{
     padding: 7w;
     color: white;
@@ -250,38 +299,44 @@ animation: 19s slide infinite linear;
     font-size: 14px;
     margin-top: 10px;
 } */
- .subscribe{
+.subscribe {
     padding: 20px 30px;
-    padding: 7vw ;
+    padding: 7vw;
     color: #fff;
 }
-.subscribe h5{
+
+.subscribe h5 {
     text-transform: uppercase;
     opacity: .6;
 }
-.subscribe h3{
+
+.subscribe h3 {
     text-transform: uppercase;
     font-size: 14px;
     margin-top: 10px;
 }
-.footer{
+
+.footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 30px;
 
 }
-.footer-left{
+
+.footer-left {
     color: white;
     display: flex;
     gap: 30px;
 }
-.footer-right{
+
+.footer-right {
     display: flex;
     gap: 20px;
 
 }
-.footer-right a{
+
+.footer-right a {
     text-decoration: none;
     color: white;
 }
